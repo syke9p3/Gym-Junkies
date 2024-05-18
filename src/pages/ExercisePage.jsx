@@ -4,7 +4,8 @@ import { ThemeContext } from "../context/theme";
 import PageNotFound from "../components/PageNotFound";
 import jsonData from "../DB/exerciseData.json";
 import clsx from "clsx";
-// import YoutubeEmbed from "../components/YoutubeEmbed";
+import YoutubeEmbed from "../components/YoutubeEmbed";
+
 
 export function ExercisePage() {
   const { themeName } = useContext(ThemeContext);
@@ -45,7 +46,7 @@ export function ExercisePage() {
 
   return (
     <section className="mx-auto max-w-screen-xl">
-      {/* <YoutubeEmbed videoLink={exercise.videoLink}/> */}
+      <YoutubeEmbed videoLink={exercise.videoLink}/>
       <div className="grid grid-cols-1 gap-6 p-5 py-8 md:grid-cols-12">
         <div className="order-last col-span-4 md:order-first">
           <div className="relative overflow-hidden pb-[100%] h-0">
